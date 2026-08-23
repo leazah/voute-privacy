@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Voûte — Assistance</title>
+<meta name="description" content="Assistance et contact pour Voûte, le gestionnaire de cave à vin : gratuit, local, sans compte.">
+<style>
+  :root{
+    --bg:#fdfaf5; --panel:#f5efe6; --text:#241d18; --muted:#6b5f54;
+    --accent:#8a6d1f; --accent-soft:#f3e8cd; --border:#e6dcc9; --link:#8a6d1f;
+    --maxw:44rem;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#141110; --panel:#1f1a18; --text:#efe9df; --muted:#a89c8c;
+      --accent:#c9a84c; --accent-soft:#2a2214; --border:#332b24; --link:#d9bc6a;
+    }
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.65; font-size:17px;
+    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+  }
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:2.2rem 1.25rem 4rem;}
+  header{
+    display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between;
+    gap:1rem; padding-bottom:1.4rem; margin-bottom:1.6rem; border-bottom:1px solid var(--border);
+  }
+  .brand{
+    font-weight:700; letter-spacing:.02em; font-size:1.05rem;
+    display:flex; align-items:center; gap:.55rem;
+  }
+  .brand .dot{
+    width:.85rem; height:.85rem; border-radius:.22rem;
+    background:linear-gradient(135deg, var(--accent), #8a6d1f);
+    box-shadow:0 0 0 4px var(--accent-soft);
+  }
+  .langs{display:flex; gap:.35rem;}
+  .langs button{
+    font:inherit; font-size:.86rem; font-weight:600; cursor:pointer;
+    padding:.34rem .7rem; border-radius:999px; color:var(--muted);
+    background:transparent; border:1px solid var(--border);
+    transition:background .15s,color .15s,border-color .15s;
+  }
+  .langs button:hover{color:var(--text);}
+  .langs button[aria-pressed="true"]{
+    background:var(--accent-soft); color:var(--accent); border-color:transparent;
+  }
+  h1{font-size:1.7rem; line-height:1.25; margin:.2rem 0 .3rem; letter-spacing:-.01em;}
+  .updated{color:var(--muted); font-size:.92rem; margin:0 0 2rem;}
+  h2{
+    font-size:1.16rem; margin:2.1rem 0 .5rem; padding-top:.2rem;
+    color:var(--accent); letter-spacing:-.005em;
+  }
+  p{margin:.55rem 0;}
+  ul{margin:.6rem 0 .6rem; padding-left:1.2rem;}
+  li{margin:.32rem 0;}
+  a{color:var(--link); text-decoration:none; border-bottom:1px solid transparent; transition:border-color .15s;}
+  a:hover{border-bottom-color:var(--link);}
+  strong{font-weight:650;}
+  .intro{
+    background:var(--panel); border:1px solid var(--border); border-radius:.9rem;
+    padding:.9rem 1.1rem; margin:.4rem 0 .6rem;
+  }
+  .intro p{margin:0;}
+  footer{
+    margin-top:3rem; padding-top:1.3rem; border-top:1px solid var(--border);
+    color:var(--muted); font-size:.86rem;
+  }
+  section[hidden]{display:none;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot" aria-hidden="true"></span>Voûte</div>
+    <nav class="langs" aria-label="Langue / Language">
+      <button data-l="fr" aria-pressed="true" onclick="setLang('fr')">Français</button>
+      <button data-l="en" aria-pressed="false" onclick="setLang('en')">English</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="fr" lang="fr">
+      <h1>Assistance</h1>
+      <p class="updated">Voûte — votre cave à vin, gratuite et privée.</p>
+
+      <div class="intro">
+        <p><strong>Voûte</strong> garde votre cave sur votre iPhone : vins, emplacements, fenêtres d'apogée, dégustations, statistiques — sans compte, sans publicité, sans collecte de données.</p>
+      </div>
+
+      <h2>Questions fréquentes</h2>
+      <p><strong>Mes données sont-elles en sécurité ?</strong> Tout vit sur votre appareil. Vous pouvez exporter l'intégralité de votre cave (JSON, CSV, PDF) depuis Réglages → Exports, et activer si vous le souhaitez la synchronisation via votre iCloud privé.</p>
+      <p><strong>L'app est-elle vraiment gratuite ?</strong> Oui, entièrement et sans limite — pas d'achat intégré, pas d'abonnement.</p>
+      <p><strong>Comment scanner une étiquette ?</strong> Depuis l'onglet Cave, touchez « + » puis « Scanner l'étiquette » : la lecture se fait sur l'appareil, l'image n'est jamais envoyée.</p>
+      <p><strong>Un vin, une fonction, un souci ?</strong> Écrivez-nous — chaque message est lu.</p>
+
+      <h2>Contact</h2>
+      <p><a href="mailto:hazael.bosson@gmail.com">hazael.bosson@gmail.com</a></p>
+
+      <h2>Confidentialité</h2>
+      <p><a href="privacy.html">Politique de confidentialité</a> — en résumé : aucune donnée collectée, aucun serveur.</p>
+    </section>
+
+    <section id="en" lang="en" hidden>
+      <h1>Support</h1>
+      <p class="updated">Voûte — your wine cellar, free and private.</p>
+
+      <div class="intro">
+        <p><strong>Voûte</strong> keeps your cellar on your iPhone: wines, locations, drinking windows, tastings, statistics — no account, no ads, no data collection.</p>
+      </div>
+
+      <h2>Frequently asked questions</h2>
+      <p><strong>Is my data safe?</strong> Everything lives on your device. You can export your whole cellar (JSON, CSV, PDF) from Settings → Exports, and optionally enable sync through your private iCloud.</p>
+      <p><strong>Is the app really free?</strong> Yes, entirely and without limits — no in-app purchase, no subscription.</p>
+      <p><strong>How do I scan a label?</strong> From the Cellar tab, tap “+” then “Scan the label”: recognition happens on device, the image is never uploaded.</p>
+      <p><strong>A wine, a feature, an issue?</strong> Write to us — every message is read.</p>
+
+      <h2>Contact</h2>
+      <p><a href="mailto:hazael.bosson@gmail.com">hazael.bosson@gmail.com</a></p>
+
+      <h2>Privacy</h2>
+      <p><a href="privacy.html">Privacy Policy</a> — in short: no data collected, no server.</p>
+    </section>
+  </main>
+
+  <footer>© 2026 Hazaël Bosson — Voûte</footer>
+</div>
+
+<script>
+  var LANGS = ['fr','en'];
+  var TITLES = {
+    fr: 'Voûte — Assistance',
+    en: 'Voûte — Support'
+  };
+  function setLang(l){
+    if (LANGS.indexOf(l) === -1) l = 'fr';
+    for (var i=0;i<LANGS.length;i++){
+      var x = LANGS[i];
+      document.getElementById(x).hidden = (x !== l);
+      var btn = document.querySelector('button[data-l="'+x+'"]');
+      if (btn) btn.setAttribute('aria-pressed', x === l ? 'true' : 'false');
+    }
+    document.documentElement.lang = l;
+    if (TITLES[l]) document.title = TITLES[l];
+  }
+  (function(){
+    var n = (navigator.language || 'fr').slice(0,2).toLowerCase();
+    setLang(LANGS.indexOf(n) !== -1 ? n : 'fr');
+  })();
+</script>
+</body>
+</html>

@@ -1,232 +1,85 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Voûte — Politique de confidentialité</title>
-<meta name="description" content="Politique de confidentialité de Voûte — l'application ne collecte aucune donnée personnelle.">
 <style>
-  :root{
-    --bg:#fdfaf5; --panel:#f5efe6; --text:#241d18; --muted:#6b5f54;
-    --accent:#8a6d1f; --accent-soft:#f3e8cd; --border:#e6dcc9; --link:#8a6d1f;
-    --maxw:44rem;
-  }
-  @media (prefers-color-scheme: dark){
-    :root{
-      --bg:#141110; --panel:#1f1a18; --text:#efe9df; --muted:#a89c8c;
-      --accent:#c9a84c; --accent-soft:#2a2214; --border:#332b24; --link:#d9bc6a;
-    }
-  }
+  :root{--paper:#FBF8F2;--ink:#1F1A17;--muted:#6B625A;--wine:#7A2E2E;--rule:#E3DCCF;--maxw:42rem;color-scheme:light;}
   *{box-sizing:border-box;}
   html{-webkit-text-size-adjust:100%;}
-  body{
-    margin:0; background:var(--bg); color:var(--text);
+  body{margin:0;background:var(--paper);color:var(--ink);
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    line-height:1.65; font-size:17px;
-    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
-  }
-  .wrap{max-width:var(--maxw); margin:0 auto; padding:2.2rem 1.25rem 4rem;}
-  header{
-    display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between;
-    gap:1rem; padding-bottom:1.4rem; margin-bottom:1.6rem; border-bottom:1px solid var(--border);
-  }
-  .brand{
-    font-weight:700; letter-spacing:.02em; font-size:1.05rem;
-    display:flex; align-items:center; gap:.55rem;
-  }
-  .brand .dot{
-    width:.85rem; height:.85rem; border-radius:.22rem;
-    background:linear-gradient(135deg, var(--accent), #8a6d1f);
-    box-shadow:0 0 0 4px var(--accent-soft);
-  }
-  .langs{display:flex; gap:.35rem;}
-  .langs button{
-    font:inherit; font-size:.86rem; font-weight:600; cursor:pointer;
-    padding:.34rem .7rem; border-radius:999px; color:var(--muted);
-    background:transparent; border:1px solid var(--border);
-    transition:background .15s,color .15s,border-color .15s;
-  }
-  .langs button:hover{color:var(--text);}
-  .langs button[aria-pressed="true"]{
-    background:var(--accent-soft); color:var(--accent); border-color:transparent;
-  }
-  h1{font-size:1.7rem; line-height:1.25; margin:.2rem 0 .3rem; letter-spacing:-.01em;}
-  .updated{color:var(--muted); font-size:.92rem; margin:0 0 2rem;}
-  h2{
-    font-size:1.16rem; margin:2.1rem 0 .5rem; padding-top:.2rem;
-    color:var(--accent); letter-spacing:-.005em;
-  }
-  p{margin:.55rem 0;}
-  ul{margin:.6rem 0 .6rem; padding-left:1.2rem;}
-  li{margin:.32rem 0;}
-  a{color:var(--link); text-decoration:none; border-bottom:1px solid transparent; transition:border-color .15s;}
-  a:hover{border-bottom-color:var(--link);}
-  strong{font-weight:650;}
-  .intro{
-    background:var(--panel); border:1px solid var(--border); border-radius:.9rem;
-    padding:.9rem 1.1rem; margin:.4rem 0 .6rem;
-  }
-  .intro p{margin:0;}
-  footer{
-    margin-top:3rem; padding-top:1.3rem; border-top:1px solid var(--border);
-    color:var(--muted); font-size:.86rem;
-  }
+    line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:2rem 16px 4rem;}
+  header{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.8rem;
+    padding-bottom:1rem;margin-bottom:1.6rem;border-bottom:1px solid var(--rule);}
+  .brand{font-family:"New York",ui-serif,Georgia,serif;font-size:1.25rem;}
+  .langs{display:flex;flex-wrap:wrap;gap:.3rem;}
+  .langs button{font:inherit;font-size:.82rem;font-weight:600;cursor:pointer;padding:.25rem .55rem;
+    border-radius:2px;color:var(--muted);background:transparent;border:1px solid var(--rule);}
+  .langs button[aria-pressed="true"]{color:var(--wine);border-color:var(--wine);}
+  .kicker{font-size:11px;letter-spacing:1.2px;text-transform:uppercase;color:var(--wine);font-weight:600;
+    padding-bottom:.35rem;border-bottom:1px solid var(--wine);display:inline-block;margin:0;}
+  h1{font-family:"New York",ui-serif,Georgia,serif;font-weight:400;font-size:1.9rem;line-height:1.2;margin:.6rem 0 .3rem;}
+  .updated{color:var(--muted);font-size:.9rem;margin:0 0 1.6rem;font-variant-numeric:tabular-nums;}
+  h2{font-family:"New York",ui-serif,Georgia,serif;font-weight:400;font-size:1.25rem;margin:2rem 0 .4rem;
+    padding-top:1rem;border-top:1px solid var(--rule);}
+  p{margin:.5rem 0;} ul{margin:.5rem 0;padding-left:1.2rem;} li{margin:.3rem 0;}
+  a{color:var(--wine);}
+  strong{font-weight:600;}
+  .intro{border-left:2px solid var(--wine);padding:.2rem 0 .2rem 1rem;margin:.4rem 0 .8rem;}
+  dt{font-weight:600;margin-top:1rem;} dd{margin:.2rem 0 0;}
+  footer{margin-top:3rem;padding-top:1rem;border-top:1px solid var(--rule);color:var(--muted);font-size:.85rem;}
   section[hidden]{display:none;}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <header>
-    <div class="brand"><span class="dot" aria-hidden="true"></span>Voûte</div>
-    <nav class="langs" aria-label="Langue / Language">
-      <button data-l="fr" aria-pressed="true" onclick="setLang('fr')">Français</button>
-      <button data-l="en" aria-pressed="false" onclick="setLang('en')">English</button>
-    </nav>
-  </header>
+<header><div class="brand">Voûte</div><nav class="langs" aria-label="Langue"><button type="button" data-l="fr" lang="fr" onclick="setLang('fr')">Français</button><button type="button" data-l="en" lang="en" onclick="setLang('en')">English</button><button type="button" data-l="de" lang="de" onclick="setLang('de')">Deutsch</button><button type="button" data-l="it" lang="it" onclick="setLang('it')">Italiano</button><button type="button" data-l="es" lang="es" onclick="setLang('es')">Español</button></nav></header>
+<section id="fr" lang="fr">
+<p class="kicker">Voûte</p><h1>Politique de confidentialité</h1><p class="updated">Dernière mise à jour : 24 octobre 2026</p>
+<div class="intro"><p><strong>En bref :</strong> Voûte ne collecte aucune donnée sur vous. Pas de compte, pas de serveur, pas de publicité, pas de suivi, pas d'outil de mesure. Votre cave vit sur votre iPhone. Elle n'en sort que par votre iCloud, et seulement si vous le décidez.</p></div>
+<h2>Qui édite Voûte</h2><p>Hazaël Bosson, développeur indépendant (France). Contact : <a href="mailto:hazael.bosson@icloud.com">hazael.bosson@icloud.com</a></p><h2>Ce qui reste sur votre iPhone</h2><p>Vos vins, bouteilles, rangements, notes de dégustation, photos d'étiquettes, statistiques et réglages sont enregistrés sur votre iPhone. Personne d'autre, le développeur compris, n'y a accès. Supprimer l'app les supprime.</p><h2>Synchronisation iCloud (facultative)</h2><p>Si vous l'activez dans les Réglages de l'app, votre cave est copiée dans votre espace iCloud privé, pour la retrouver sur vos autres appareils. Apple la garde sous votre identifiant Apple ; le développeur ne peut pas la lire. Sans cette option, rien ne quitte l'iPhone.</p><h2>Cave partagée (facultative)</h2><p>Vous pouvez tenir une cave à plusieurs avec vos proches, par le partage iCloud d'Apple. Seules les personnes que vous invitez la voient. Voici ce qui est partagé :</p><ul><li>les vins et leurs bouteilles (rangement compris) ;</li><li>vos commentaires de dégustation, signés du prénom que vous avez choisi ;</li><li>les prix d'achat et la valeur que vous avez saisis, <strong>seulement si vous activez cette option</strong> ; la couper les retire chez les autres ;</li><li>les bouteilles bues, offertes, cassées ou perdues, avec leur date et les membres présents ;</li><li>votre réglage des prix, pour que vos appareils suivent le même choix.</li></ul><p>Votre note personnelle ne part jamais. Vous pouvez quitter ou arrêter le partage à tout moment. Le développeur n'a accès ni au contenu ni aux membres.</p><h2>Appareil photo et photos</h2><p>L'appareil photo sert à scanner une étiquette ; vous pouvez aussi choisir une photo dans votre photothèque. La lecture du texte et le tri des informations se font sur votre iPhone, avec les outils d'Apple (et, si votre iPhone le permet, un modèle d'Apple qui tourne localement). Aucune image n'est envoyée à un serveur. Si vous gardez la photo, elle reste attachée au vin, sur votre iPhone (et dans votre iCloud si la synchronisation est active).</p><h2>Notifications</h2><p>Voûte peut vous prévenir qu'un vin arrive à son apogée ou vit sa dernière année, et vous rappeler une dégustation passée. Ces rappels sont programmés sur l'iPhone lui-même, sans serveur. Vous pouvez les couper dans l'app ou dans les Réglages d'iOS.</p><h2>Pourboires</h2><p>Si vous aimez l'app, vous pouvez laisser un pourboire par l'App Store. Il ne débloque rien. Apple traite le paiement : Voûte ne reçoit aucune donnée bancaire. Pour ne pas vous le proposer deux fois, l'app retient dans votre iCloud que l'invitation a été vue.</p><h2>Widgets, Siri, Raccourcis et Spotlight</h2><p>Les widgets affichent ce que l'app prépare pour eux sur votre iPhone. Siri, les Raccourcis et la recherche Spotlight lisent votre cave sur l'iPhone.</p><h2>Lien « Vérifier le prix en ligne »</h2><p>Sur la fiche d'un vin, ce lien ouvre le site Wine-Searcher dans votre navigateur. L'adresse contient le nom du vin, son producteur et son millésime. Rien ne se passe tant que vous ne touchez pas le lien, et l'app elle-même n'envoie rien : c'est votre navigateur qui ouvre la page, et ce site applique sa propre politique.</p><h2>Export et import</h2><p>Vous pouvez exporter toute votre cave (JSON, CSV, livre de cave en PDF) et l'envoyer où vous voulez ; vous pouvez aussi importer un fichier CSV. Ces fichiers ne passent que par les endroits que vous choisissez.</p><h2>Ce que Voûte ne fait pas</h2><p>Pas de compte, pas de publicité, pas de suivi entre apps, pas de mesure d'audience, pas de vente ni de partage de données, pas de bibliothèque tierce.</p><h2>Données de référence</h2><p>Le catalogue de vins et l'Atlas sont inclus dans l'app et marchent hors ligne. Leurs sources et licences sont dans Réglages › Sources.</p><h2>Vos droits</h2><p>Le développeur ne détient aucune donnée sur vous : il n'a rien à consulter, corriger ou effacer. Vos données sont à vous, dans l'app et dans votre iCloud (Réglages d'iOS › votre nom › iCloud). Pour toute question : <a href="mailto:hazael.bosson@icloud.com">hazael.bosson@icloud.com</a>.</p><h2>Public</h2><p>Voûte parle de vin et s'adresse aux adultes.</p><h2>Modifications</h2><p>Si cette page change, la nouvelle version sera publiée ici, avec sa date.</p>
+</section>
+<section id="en" lang="en" hidden>
+<p class="kicker">Voûte</p><h1>Privacy Policy</h1><p class="updated">Last updated: 24 October 2026</p>
+<div class="intro"><p><strong>In short:</strong> Voûte collects no data about you. No account, no server, no ads, no tracking, no analytics. Your cellar lives on your iPhone. It only leaves through your own iCloud, and only if you choose so.</p></div>
+<h2>Who makes Voûte</h2><p>Hazaël Bosson, an independent developer based in France. Contact: <a href="mailto:hazael.bosson@icloud.com">hazael.bosson@icloud.com</a></p><h2>What stays on your iPhone</h2><p>Your wines, bottles, storage units, tasting notes, label photos, statistics and settings are stored on your iPhone. Nobody else can see them, the developer included. Deleting the app deletes them.</p><h2>iCloud sync (optional)</h2><p>Turn it on in the app's Settings and your cellar is copied to your private iCloud space, so you find it on your other devices. Apple keeps it under your Apple Account; the developer cannot read it. With sync off, nothing leaves the iPhone.</p><h2>Shared cellar (optional)</h2><p>You can run a cellar together with people close to you, using Apple's iCloud sharing. Only the people you invite can see it. Here is what is shared:</p><ul><li>the wines and their bottles, including where they are stored;</li><li>your tasting comments, signed with the first name you picked;</li><li>the purchase prices and values you entered, <strong>only if you turn that option on</strong>; turning it off removes them for the others;</li><li>bottles drunk, given away, broken or lost, with their date and who was there;</li><li>your price setting, so all your devices follow the same choice.</li></ul><p>Your personal note is never shared. You can leave or stop sharing at any time. The developer has no access to the content or to the members.</p><h2>Camera and photos</h2><p>The camera is used to scan a label; you can also pick a picture from your photo library. Reading the text and sorting out the details happen on your iPhone, with Apple's tools (and, where your iPhone supports it, an Apple model that runs locally). No image is sent to any server. If you keep the photo, it stays with the wine on your iPhone (and in your iCloud if sync is on).</p><h2>Notifications</h2><p>Voûte can let you know when a wine reaches its peak or enters its last year, and remind you of a past tasting. These reminders are scheduled on the iPhone itself, with no server. You can turn them off in the app or in iOS Settings.</p><h2>Tips</h2><p>If you like the app, you can leave a tip through the App Store. It unlocks nothing. Apple handles the payment: Voûte never receives any banking details. So that it never asks twice, the app remembers in your iCloud that you have seen the invitation.</p><h2>Widgets, Siri, Shortcuts and Spotlight</h2><p>Widgets show what the app prepares for them on your iPhone. Siri, Shortcuts and Spotlight search read your cellar on the iPhone.</p><h2>“Check the price online” link</h2><p>On a wine's page, this link opens the Wine-Searcher website in your browser. The address contains the wine's name, producer and vintage. Nothing happens until you tap it, and the app itself sends nothing: your browser opens the page, and that site follows its own policy.</p><h2>Export and import</h2><p>You can export your whole cellar (JSON, CSV, PDF cellar book) and send it wherever you like; you can also import a CSV file. These files only go where you decide.</p><h2>What Voûte does not do</h2><p>No account, no ads, no cross-app tracking, no audience measurement, no selling or sharing of data, no third-party library.</p><h2>Reference data</h2><p>The wine catalogue and the Atlas ship inside the app and work offline. Their sources and licences are listed in Settings › Sources.</p><h2>Your rights</h2><p>The developer holds no data about you, so there is nothing to look up, correct or erase on that side. Your data is yours, in the app and in your iCloud (iOS Settings › your name › iCloud). Any question: <a href="mailto:hazael.bosson@icloud.com">hazael.bosson@icloud.com</a>.</p><h2>Audience</h2><p>Voûte is about wine and is meant for adults.</p><h2>Changes</h2><p>If this page changes, the new version will be posted here with its date.</p>
+</section>
+<section id="de" lang="de" hidden>
+<p class="kicker">Voûte</p><h1>Datenschutzerklärung</h1><p class="updated">Zuletzt aktualisiert: 24. Oktober 2026</p>
+<div class="intro"><p><strong>Kurz gesagt:</strong> Voûte erhebt keine Daten über Sie. Kein Konto, kein Server, keine Werbung, kein Tracking, keine Analyse. Ihr Keller lebt auf Ihrem iPhone. Er verlässt es nur über Ihre eigene iCloud – und nur, wenn Sie das wollen.</p></div>
+<h2>Wer hinter Voûte steht</h2><p>Hazaël Bosson, unabhängiger Entwickler in Frankreich. Kontakt: <a href="mailto:hazael.bosson@icloud.com">hazael.bosson@icloud.com</a></p><h2>Was auf Ihrem iPhone bleibt</h2><p>Ihre Weine, Flaschen, Lagerplätze, Verkostungsnotizen, Etikettenfotos, Statistiken und Einstellungen werden auf Ihrem iPhone gespeichert. Niemand sonst hat Zugriff darauf, auch der Entwickler nicht. Wer die App löscht, löscht sie mit.</p><h2>iCloud-Synchronisierung (optional)</h2><p>Wenn Sie sie in den Einstellungen der App einschalten, wird Ihr Keller in Ihren privaten iCloud-Bereich kopiert, damit Sie ihn auf Ihren anderen Geräten wiederfinden. Apple verwahrt ihn unter Ihrem Apple Account; der Entwickler kann ihn nicht lesen. Ohne diese Option verlässt nichts das iPhone.</p><h2>Geteilter Keller (optional)</h2><p>Sie können einen Keller gemeinsam mit Ihren Liebsten führen, über die iCloud-Freigabe von Apple. Nur die Personen, die Sie einladen, sehen ihn. Geteilt wird:</p><ul><li>die Weine und ihre Flaschen, samt Lagerplatz;</li><li>Ihre Verkostungskommentare, gezeichnet mit dem Vornamen, den Sie gewählt haben;</li><li>die eingegebenen Kaufpreise und Werte, <strong>nur wenn Sie diese Option einschalten</strong>; schalten Sie sie aus, verschwinden sie bei den anderen;</li><li>getrunkene, verschenkte, zerbrochene oder verlorene Flaschen, mit Datum und den Anwesenden;</li><li>Ihre Preiseinstellung, damit alle Ihre Geräte derselben Wahl folgen.</li></ul><p>Ihre persönliche Notiz wird nie geteilt. Sie können die Freigabe jederzeit verlassen oder beenden. Der Entwickler hat weder auf die Inhalte noch auf die Mitglieder Zugriff.</p><h2>Kamera und Fotos</h2><p>Mit der Kamera scannen Sie ein Etikett; Sie können auch ein Foto aus Ihrer Mediathek wählen. Das Lesen des Textes und das Ordnen der Angaben geschehen auf Ihrem iPhone, mit Werkzeugen von Apple (und, wo Ihr iPhone es unterstützt, mit einem lokal laufenden Modell von Apple). Kein Bild wird an einen Server geschickt. Behalten Sie das Foto, bleibt es beim Wein auf Ihrem iPhone (und in Ihrer iCloud, wenn die Synchronisierung aktiv ist).</p><h2>Mitteilungen</h2><p>Voûte kann Ihnen sagen, wenn ein Wein seinen Höhepunkt erreicht oder in sein letztes Jahr geht, und Sie an eine frühere Verkostung erinnern. Diese Erinnerungen werden auf dem iPhone selbst geplant, ohne Server. Sie lassen sich in der App oder in den iOS-Einstellungen abschalten.</p><h2>Trinkgeld</h2><p>Wenn Ihnen die App gefällt, können Sie über den App Store ein Trinkgeld geben. Es schaltet nichts frei. Die Zahlung wickelt Apple ab: Voûte erhält keine Bankdaten. Damit die Einladung nicht zweimal kommt, merkt sich die App in Ihrer iCloud, dass Sie sie gesehen haben.</p><h2>Widgets, Siri, Kurzbefehle und Spotlight</h2><p>Die Widgets zeigen, was die App auf Ihrem iPhone für sie vorbereitet. Siri, Kurzbefehle und die Spotlight-Suche lesen Ihren Keller auf dem iPhone.</p><h2>Link „Preis online prüfen“</h2><p>Auf der Seite eines Weins öffnet dieser Link die Website Wine-Searcher in Ihrem Browser. Die Adresse enthält Name, Erzeuger und Jahrgang des Weins. Solange Sie den Link nicht antippen, passiert nichts, und die App selbst sendet nichts: Ihr Browser öffnet die Seite, und diese Website folgt ihren eigenen Regeln.</p><h2>Export und Import</h2><p>Sie können Ihren ganzen Keller exportieren (JSON, CSV, Kellerbuch als PDF) und dorthin schicken, wo Sie möchten; Sie können auch eine CSV-Datei importieren. Diese Dateien gehen nur dorthin, wo Sie es bestimmen.</p><h2>Was Voûte nicht tut</h2><p>Kein Konto, keine Werbung, kein App-übergreifendes Tracking, keine Reichweitenmessung, kein Verkauf und keine Weitergabe von Daten, keine Bibliothek von Dritten.</p><h2>Referenzdaten</h2><p>Der Weinkatalog und der Atlas sind in der App enthalten und funktionieren offline. Quellen und Lizenzen finden Sie unter Einstellungen › Quellen.</p><h2>Ihre Rechte</h2><p>Der Entwickler besitzt keine Daten über Sie und hat daher nichts einzusehen, zu berichtigen oder zu löschen. Ihre Daten gehören Ihnen, in der App und in Ihrer iCloud (iOS-Einstellungen › Ihr Name › iCloud). Fragen an: <a href="mailto:hazael.bosson@icloud.com">hazael.bosson@icloud.com</a>.</p><h2>Zielgruppe</h2><p>Voûte handelt von Wein und richtet sich an Erwachsene.</p><h2>Änderungen</h2><p>Ändert sich diese Seite, wird die neue Fassung hier mit Datum veröffentlicht.</p>
+</section>
+<section id="it" lang="it" hidden>
+<p class="kicker">Voûte</p><h1>Informativa sulla privacy</h1><p class="updated">Ultimo aggiornamento: 24 ottobre 2026</p>
+<div class="intro"><p><strong>In breve:</strong> Voûte non raccoglie alcun dato su di te. Nessun account, nessun server, nessuna pubblicità, nessun tracciamento, nessuna analisi. La tua cantina vive sul tuo iPhone. Ne esce solo attraverso il tuo iCloud, e solo se lo decidi tu.</p></div>
+<h2>Chi pubblica Voûte</h2><p>Hazaël Bosson, sviluppatore indipendente in Francia. Contatto: <a href="mailto:hazael.bosson@icloud.com">hazael.bosson@icloud.com</a></p><h2>Cosa resta sul tuo iPhone</h2><p>I tuoi vini, le bottiglie, le collocazioni, le note di degustazione, le foto delle etichette, le statistiche e le impostazioni sono salvati sul tuo iPhone. Nessun altro può vederli, nemmeno lo sviluppatore. Eliminando l'app, si eliminano anche loro.</p><h2>Sincronizzazione iCloud (facoltativa)</h2><p>Se la attivi nelle Impostazioni dell'app, la tua cantina viene copiata nel tuo spazio iCloud privato, così la ritrovi sugli altri dispositivi. Apple la custodisce sotto il tuo Account Apple; lo sviluppatore non può leggerla. Senza questa opzione, nulla lascia l'iPhone.</p><h2>Cantina condivisa (facoltativa)</h2><p>Puoi gestire una cantina insieme alle persone a te care, con la condivisione iCloud di Apple. La vedono solo le persone che inviti. Ecco cosa viene condiviso:</p><ul><li>i vini e le loro bottiglie, collocazione compresa;</li><li>i tuoi commenti di degustazione, firmati con il nome che hai scelto;</li><li>i prezzi d'acquisto e i valori che hai inserito, <strong>solo se attivi questa opzione</strong>; disattivarla li toglie agli altri;</li><li>le bottiglie bevute, regalate, rotte o perse, con la data e chi era presente;</li><li>la tua impostazione dei prezzi, perché tutti i tuoi dispositivi seguano la stessa scelta.</li></ul><p>La tua nota personale non viene mai condivisa. Puoi uscire dalla condivisione o interromperla in qualsiasi momento. Lo sviluppatore non ha accesso né ai contenuti né ai membri.</p><h2>Fotocamera e foto</h2><p>La fotocamera serve a scansionare un'etichetta; puoi anche scegliere una foto dalla tua libreria. La lettura del testo e il riordino delle informazioni avvengono sul tuo iPhone, con gli strumenti di Apple (e, se il tuo iPhone lo consente, con un modello di Apple che funziona in locale). Nessuna immagine viene inviata a un server. Se tieni la foto, resta legata al vino sul tuo iPhone (e nel tuo iCloud se la sincronizzazione è attiva).</p><h2>Notifiche</h2><p>Voûte può avvisarti quando un vino raggiunge il suo apice o entra nel suo ultimo anno, e ricordarti una degustazione passata. Questi promemoria sono programmati sull'iPhone stesso, senza server. Puoi disattivarli nell'app o nelle Impostazioni di iOS.</p><h2>Mance</h2><p>Se l'app ti piace, puoi lasciare una mancia tramite l'App Store. Non sblocca nulla. Il pagamento lo gestisce Apple: Voûte non riceve alcun dato bancario. Per non proportela due volte, l'app ricorda nel tuo iCloud che hai già visto l'invito.</p><h2>Widget, Siri, Comandi rapidi e Spotlight</h2><p>I widget mostrano ciò che l'app prepara per loro sul tuo iPhone. Siri, Comandi rapidi e la ricerca Spotlight leggono la tua cantina sull'iPhone.</p><h2>Link «Verifica il prezzo online»</h2><p>Nella scheda di un vino, questo link apre il sito Wine-Searcher nel tuo browser. L'indirizzo contiene il nome del vino, il produttore e l'annata. Non succede nulla finché non tocchi il link, e l'app in sé non invia niente: è il tuo browser ad aprire la pagina, e quel sito segue la propria informativa.</p><h2>Esportazione e importazione</h2><p>Puoi esportare tutta la tua cantina (JSON, CSV, libro di cantina in PDF) e mandarla dove vuoi; puoi anche importare un file CSV. Questi file vanno solo dove decidi tu.</p><h2>Cosa Voûte non fa</h2><p>Nessun account, nessuna pubblicità, nessun tracciamento tra app, nessuna misurazione dell'audience, nessuna vendita o condivisione di dati, nessuna libreria di terzi.</p><h2>Dati di riferimento</h2><p>Il catalogo dei vini e l'Atlante sono inclusi nell'app e funzionano offline. Fonti e licenze sono in Impostazioni › Fonti.</p><h2>I tuoi diritti</h2><p>Lo sviluppatore non detiene alcun dato su di te: non ha nulla da consultare, correggere o cancellare. I tuoi dati sono tuoi, nell'app e nel tuo iCloud (Impostazioni di iOS › il tuo nome › iCloud). Per qualsiasi domanda: <a href="mailto:hazael.bosson@icloud.com">hazael.bosson@icloud.com</a>.</p><h2>Pubblico</h2><p>Voûte parla di vino ed è pensata per gli adulti.</p><h2>Modifiche</h2><p>Se questa pagina cambia, la nuova versione sarà pubblicata qui con la sua data.</p>
+</section>
+<section id="es" lang="es" hidden>
+<p class="kicker">Voûte</p><h1>Política de privacidad</h1><p class="updated">Última actualización: 24 de octubre de 2026</p>
+<div class="intro"><p><strong>En resumen:</strong> Voûte no recoge ningún dato sobre ti. Sin cuenta, sin servidor, sin publicidad, sin rastreo, sin analítica. Tu bodega vive en tu iPhone. Solo sale de él a través de tu propio iCloud, y solo si tú lo decides.</p></div>
+<h2>Quién está detrás de Voûte</h2><p>Hazaël Bosson, desarrollador independiente en Francia. Contacto: <a href="mailto:hazael.bosson@icloud.com">hazael.bosson@icloud.com</a></p><h2>Lo que se queda en tu iPhone</h2><p>Tus vinos, botellas, ubicaciones, notas de cata, fotos de etiquetas, estadísticas y ajustes se guardan en tu iPhone. Nadie más puede verlos, tampoco el desarrollador. Si borras la app, se borran con ella.</p><h2>Sincronización con iCloud (opcional)</h2><p>Si la activas en los Ajustes de la app, tu bodega se copia en tu espacio privado de iCloud para que la encuentres en tus otros dispositivos. Apple la guarda bajo tu Cuenta de Apple; el desarrollador no puede leerla. Sin esta opción, nada sale del iPhone.</p><h2>Bodega compartida (opcional)</h2><p>Puedes llevar una bodega junto con tus allegados, gracias a la función de compartir de iCloud. Solo la ven las personas que invitas. Esto es lo que se comparte:</p><ul><li>los vinos y sus botellas, con su ubicación;</li><li>tus comentarios de cata, firmados con el nombre que hayas elegido;</li><li>los precios de compra y los valores que hayas introducido, <strong>solo si activas esta opción</strong>; al desactivarla, desaparecen para los demás;</li><li>las botellas bebidas, regaladas, rotas o perdidas, con su fecha y quién estaba presente;</li><li>tu ajuste de precios, para que todos tus dispositivos sigan la misma elección.</li></ul><p>Tu nota personal nunca se comparte. Puedes salir o dejar de compartir en cualquier momento. El desarrollador no tiene acceso ni al contenido ni a los miembros.</p><h2>Cámara y fotos</h2><p>La cámara sirve para escanear una etiqueta; también puedes elegir una foto de tu fototeca. La lectura del texto y la organización de los datos se hacen en tu iPhone, con herramientas de Apple (y, si tu iPhone lo permite, con un modelo de Apple que funciona en local). Ninguna imagen se envía a un servidor. Si conservas la foto, queda unida al vino en tu iPhone (y en tu iCloud si la sincronización está activa).</p><h2>Notificaciones</h2><p>Voûte puede avisarte cuando un vino llega a su punto óptimo o entra en su último año, y recordarte una cata pasada. Estos recordatorios se programan en el propio iPhone, sin servidor. Puedes desactivarlos en la app o en los Ajustes de iOS.</p><h2>Propinas</h2><p>Si te gusta la app, puedes dejar una propina a través del App Store. No desbloquea nada. Apple gestiona el pago: Voûte no recibe ningún dato bancario. Para no proponértela dos veces, la app recuerda en tu iCloud que ya viste la invitación.</p><h2>Widgets, Siri, Atajos y Spotlight</h2><p>Los widgets muestran lo que la app prepara para ellos en tu iPhone. Siri, Atajos y la búsqueda de Spotlight leen tu bodega en el iPhone.</p><h2>Enlace «Comprobar el precio en línea»</h2><p>En la ficha de un vino, este enlace abre el sitio Wine-Searcher en tu navegador. La dirección contiene el nombre del vino, su productor y su añada. No pasa nada hasta que lo tocas, y la app en sí no envía nada: es tu navegador el que abre la página, y ese sitio aplica su propia política.</p><h2>Exportar e importar</h2><p>Puedes exportar toda tu bodega (JSON, CSV, libro de bodega en PDF) y enviarla donde quieras; también puedes importar un archivo CSV. Estos archivos solo van adonde tú decides.</p><h2>Lo que Voûte no hace</h2><p>Sin cuenta, sin publicidad, sin rastreo entre apps, sin medición de audiencia, sin venta ni cesión de datos, sin bibliotecas de terceros.</p><h2>Datos de referencia</h2><p>El catálogo de vinos y el Atlas vienen dentro de la app y funcionan sin conexión. Sus fuentes y licencias están en Ajustes › Fuentes.</p><h2>Tus derechos</h2><p>El desarrollador no guarda ningún dato sobre ti: no tiene nada que consultar, corregir ni borrar. Tus datos son tuyos, en la app y en tu iCloud (Ajustes de iOS › tu nombre › iCloud). Cualquier pregunta: <a href="mailto:hazael.bosson@icloud.com">hazael.bosson@icloud.com</a>.</p><h2>Público</h2><p>Voûte trata sobre el vino y está pensada para adultos.</p><h2>Cambios</h2><p>Si esta página cambia, la nueva versión se publicará aquí con su fecha.</p>
+</section>
 
-  <main>
-    <!-- ============================ FRANÇAIS ============================ -->
-    <section id="fr" lang="fr">
-      <h1>Politique de confidentialité</h1>
-      <p class="updated">Dernière mise à jour : 23 août 2026</p>
-
-      <div class="intro">
-        <p><strong>Voûte ne collecte aucune donnée personnelle et n'a aucun serveur.</strong> Votre cave vit sur votre appareil. La seule chose qui peut en sortir passe par <strong>votre</strong> iCloud privé — et uniquement si vous activez la synchronisation ou la cave partagée. Rien d'autre, jamais.</p>
-      </div>
-
-      <h2>Qui sommes-nous</h2>
-      <p>Voûte est une application éditée par <strong>Hazaël Bosson</strong>, développeur indépendant (France).<br>Contact : <a href="mailto:hazael.bosson@icloud.com">hazael.bosson@icloud.com</a></p>
-
-      <h2>Données que nous collectons</h2>
-      <p><strong>Aucune.</strong> Voûte ne collecte, ne transmet et ne stocke sur aucun serveur la moindre donnée personnelle. Concrètement, l'application :</p>
-      <ul>
-        <li>ne demande <strong>aucune inscription</strong> ni création de compte ;</li>
-        <li>ne contient <strong>aucun outil de mesure d'audience, d'analytics ou de suivi</strong> (pas de Google Analytics, Firebase, SDK publicitaire, ni équivalent) ;</li>
-        <li>ne diffuse <strong>aucune publicité</strong> et n'intègre <strong>aucun réseau publicitaire</strong> ;</li>
-        <li>n'intègre <strong>aucune bibliothèque tierce</strong> ;</li>
-        <li>est <strong>entièrement gratuite</strong>, sans achat intégré ni abonnement.</li>
-      </ul>
-
-      <h2>Votre cave</h2>
-      <p>Vos vins, bouteilles, rangements, notes de dégustation, statistiques et réglages sont enregistrés <strong>uniquement en local, sur votre appareil</strong>. Désinstaller l'application les supprime. Vous pouvez à tout moment exporter l'intégralité de vos données (JSON, CSV, PDF) depuis les Réglages — elles vous appartiennent.</p>
-
-      <h2>Synchronisation iCloud (facultative)</h2>
-      <p>Si vous l'activez dans les Réglages, votre cave se synchronise entre vos appareils via <strong>votre base iCloud privée</strong> (CloudKit). Ces données transitent et résident dans <strong>votre</strong> compte iCloud, chiffrées par Apple : nous n'y avons <strong>aucun accès</strong>, ne les voyons jamais et n'en conservons aucune copie. Ce service est régi par la politique de confidentialité d'Apple. La synchronisation est <strong>désactivée par défaut</strong> et l'application fonctionne intégralement sans elle.</p>
-
-      <h2>Cave partagée (facultative)</h2>
-      <p>La cave partagée permet de tenir une cave à plusieurs. Elle repose sur le <strong>partage CloudKit d'Apple</strong> : les vins que vous choisissez d'envoyer sont visibles des seules personnes que <strong>vous</strong> invitez, via iCloud. Rien ne se synchronise tout seul — chaque envoi et chaque récupération est un geste volontaire. Nous n'avons accès ni au contenu partagé, ni à l'identité des participants.</p>
-
-      <h2>Caméra (facultative)</h2>
-      <p>Voûte peut utiliser l'appareil photo pour <strong>scanner l'étiquette</strong> d'une bouteille. L'image est analysée <strong>sur votre appareil</strong> (reconnaissance de texte Vision d'Apple), n'est <strong>jamais transmise</strong> et n'est pas conservée : seul le texte que vous validez entre dans votre cave. L'accès à la caméra ne se fait qu'à votre demande, et l'application fonctionne intégralement sans.</p>
-
-      <h2>Sommelier et suggestions</h2>
-      <p>Les suggestions d'accords mets-vins et le sommelier reposent sur des référentiels embarqués et, sur les appareils compatibles, sur les <strong>modèles d'intelligence locaux d'Apple</strong> — le traitement a lieu <strong>sur votre appareil</strong>, sans envoi à un quelconque serveur.</p>
-
-      <h2>Notifications</h2>
-      <p>Voûte peut vous proposer des rappels — un vin qui atteint son apogée, un anniversaire de dégustation. Ils sont <strong>facultatifs</strong> et entièrement produits sur votre appareil. Aucune notification ne transite par nos soins, et aucun identifiant de notification ne nous est transmis.</p>
-
-      <h2>Liens externes</h2>
-      <p>Depuis la fiche d'un vin, un lien peut ouvrir une recherche de prix sur le site Wine-Searcher <strong>dans votre navigateur</strong>. Ce site tiers est régi par sa propre politique de confidentialité ; l'application ne lui transmet que le nom du vin recherché, et uniquement quand vous touchez le lien.</p>
-
-      <h2>Public concerné</h2>
-      <p>Voûte traite du vin et s'adresse à un public adulte (classification App Store adaptée aux références à l'alcool). L'application <strong>ne collecte aucune donnée</strong>, y compris auprès de mineurs, conformément au RGPD et au COPPA.</p>
-
-      <h2>Vos droits (RGPD)</h2>
-      <p>Comme nous ne collectons ni ne détenons aucune donnée personnelle vous concernant, il n'y a <strong>aucune donnée à consulter, corriger, exporter ou supprimer</strong> de notre côté. Votre cave reste sous votre entier contrôle sur votre appareil (et, si vous l'activez, dans votre iCloud — adressez-vous à Apple pour vos données iCloud). Pour toute question, écrivez-nous à <a href="mailto:hazael.bosson@icloud.com">hazael.bosson@icloud.com</a>.</p>
-
-      <h2>Services tiers</h2>
-      <p>Le seul tiers impliqué est <strong>Apple</strong>, à travers iCloud/CloudKit (si vous l'activez) et l'App Store. Aucun autre service, SDK ou prestataire n'est intégré à l'application.</p>
-
-      <h2>Modifications de cette politique</h2>
-      <p>Cette politique peut être mise à jour si l'application évolue. Toute modification sera publiée à cette adresse avec une nouvelle date de mise à jour. Les changements importants seront signalés dans les notes de version.</p>
-
-      <h2>Contact</h2>
-      <p>Pour toute question relative à cette politique ou à vos données : <a href="mailto:hazael.bosson@icloud.com">hazael.bosson@icloud.com</a></p>
-    </section>
-
-    <!-- ============================ ENGLISH ============================ -->
-    <section id="en" lang="en" hidden>
-      <h1>Privacy Policy</h1>
-      <p class="updated">Last updated: 23 August 2026</p>
-
-      <div class="intro">
-        <p><strong>Voûte collects no personal data and has no server.</strong> Your cellar lives on your device. The only thing that can leave it goes through <strong>your</strong> private iCloud — and only if you enable sync or the shared cellar. Nothing else, ever.</p>
-      </div>
-
-      <h2>Who we are</h2>
-      <p>Voûte is published by <strong>Hazaël Bosson</strong>, an independent developer (France).<br>Contact: <a href="mailto:hazael.bosson@icloud.com">hazael.bosson@icloud.com</a></p>
-
-      <h2>Data we collect</h2>
-      <p><strong>None.</strong> Voûte does not collect, transmit or store any personal data on any server. Specifically, the app:</p>
-      <ul>
-        <li>requires <strong>no sign-up</strong> and no account;</li>
-        <li>contains <strong>no analytics, measurement or tracking tools</strong> (no Google Analytics, Firebase, ad SDK, or equivalent);</li>
-        <li>shows <strong>no advertising</strong> and integrates <strong>no ad network</strong>;</li>
-        <li>includes <strong>no third-party library</strong>;</li>
-        <li>is <strong>entirely free</strong>, with no in-app purchase and no subscription.</li>
-      </ul>
-
-      <h2>Your cellar</h2>
-      <p>Your wines, bottles, racks, tasting notes, statistics and settings are stored <strong>only locally, on your device</strong>. Deleting the app removes them. You can export all of your data at any time (JSON, CSV, PDF) from Settings — it belongs to you.</p>
-
-      <h2>iCloud sync (optional)</h2>
-      <p>If you enable it in Settings, your cellar syncs across your devices through <strong>your private iCloud database</strong> (CloudKit). That data travels through and lives in <strong>your</strong> iCloud account, encrypted by Apple: we have <strong>no access</strong> to it, never see it, and keep no copy. The service is governed by Apple's privacy policy. Sync is <strong>off by default</strong> and the app works fully without it.</p>
-
-      <h2>Shared cellar (optional)</h2>
-      <p>The shared cellar lets several people keep one cellar together. It relies on <strong>Apple's CloudKit sharing</strong>: the wines you choose to send are visible only to the people <strong>you</strong> invite, through iCloud. Nothing syncs on its own — every push and pull is a deliberate action. We have no access to the shared content or to the participants' identities.</p>
-
-      <h2>Camera (optional)</h2>
-      <p>Voûte can use the camera to <strong>scan a bottle label</strong>. The image is analyzed <strong>on your device</strong> (Apple's Vision text recognition), is <strong>never transmitted</strong> and is not kept: only the text you confirm enters your cellar. The camera is used only when you ask, and the app works fully without it.</p>
-
-      <h2>Sommelier and suggestions</h2>
-      <p>Food-pairing suggestions and the sommelier rely on built-in reference data and, on compatible devices, on <strong>Apple's on-device intelligence models</strong> — processing happens <strong>on your device</strong>, with nothing sent to any server.</p>
-
-      <h2>Notifications</h2>
-      <p>Voûte may offer reminders — a wine reaching its peak, a tasting anniversary. They are <strong>optional</strong> and produced entirely on your device. No notification passes through us, and no notification identifier is sent to us.</p>
-
-      <h2>External links</h2>
-      <p>From a wine's page, a link can open a price search on the Wine-Searcher website <strong>in your browser</strong>. That third-party site is governed by its own privacy policy; the app passes it only the name of the wine you are looking up, and only when you tap the link.</p>
-
-      <h2>Audience</h2>
-      <p>Voûte is about wine and is intended for adults (App Store rating reflecting alcohol references). The app <strong>collects no data</strong>, including from minors, in accordance with GDPR and COPPA.</p>
-
-      <h2>Your rights (GDPR)</h2>
-      <p>Because we collect and hold no personal data about you, there is <strong>no data for us to access, correct, export or delete</strong>. Your cellar remains entirely under your control on your device (and, if you enable it, in your iCloud — contact Apple regarding your iCloud data). For any question, write to <a href="mailto:hazael.bosson@icloud.com">hazael.bosson@icloud.com</a>.</p>
-
-      <h2>Third-party services</h2>
-      <p>The only third party involved is <strong>Apple</strong>, through iCloud/CloudKit (if you enable it) and the App Store. No other service, SDK or provider is integrated into the app.</p>
-
-      <h2>Changes to this policy</h2>
-      <p>This policy may be updated if the app evolves. Any change will be posted at this address with a new update date. Significant changes will be noted in the app's release notes.</p>
-
-      <h2>Contact</h2>
-      <p>For any question about this policy or your data: <a href="mailto:hazael.bosson@icloud.com">hazael.bosson@icloud.com</a></p>
-    </section>
-  </main>
-
-  <footer>© 2026 Hazaël Bosson — Voûte</footer>
+<footer>© 2026 Hazaël Bosson — Voûte</footer>
 </div>
-
 <script>
-  var LANGS = ['fr','en'];
-  var TITLES = {
-    fr: 'Voûte — Politique de confidentialité',
-    en: 'Voûte — Privacy Policy'
-  };
+  var LANGS=['fr', 'en', 'de', 'it', 'es'];
+  var TITLES={fr:'Voûte — Politique de confidentialité',en:'Voûte — Privacy Policy',de:'Voûte — Datenschutzerklärung',it:'Voûte — Informativa sulla privacy',es:'Voûte — Política de privacidad'};
   function setLang(l){
-    if (LANGS.indexOf(l) === -1) l = 'fr';
-    for (var i=0;i<LANGS.length;i++){
-      var x = LANGS[i];
-      document.getElementById(x).hidden = (x !== l);
-      var btn = document.querySelector('button[data-l="'+x+'"]');
-      if (btn) btn.setAttribute('aria-pressed', x === l ? 'true' : 'false');
-    }
-    document.documentElement.lang = l;
-    if (TITLES[l]) document.title = TITLES[l];
+    if(LANGS.indexOf(l)===-1)l='fr';
+    LANGS.forEach(function(x){
+      document.getElementById(x).hidden=(x!==l);
+      var b=document.querySelector('button[data-l="'+x+'"]');
+      if(b)b.setAttribute('aria-pressed',x===l?'true':'false');
+    });
+    document.documentElement.lang=l; document.title=TITLES[l];
   }
   (function(){
-    var n = (navigator.language || 'fr').slice(0,2).toLowerCase();
-    setLang(LANGS.indexOf(n) !== -1 ? n : 'fr');
+    var n=(location.hash.slice(1)||navigator.language||'fr').slice(0,2).toLowerCase();
+    setLang(LANGS.indexOf(n)!==-1?n:'fr'); window.scrollTo(0,0);
   })();
 </script>
 </body>

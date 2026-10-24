@@ -1,156 +1,95 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Voûte — Assistance</title>
-<meta name="description" content="Assistance et contact pour Voûte, le gestionnaire de cave à vin : gratuit, local, sans compte.">
 <style>
-  :root{
-    --bg:#fdfaf5; --panel:#f5efe6; --text:#241d18; --muted:#6b5f54;
-    --accent:#8a6d1f; --accent-soft:#f3e8cd; --border:#e6dcc9; --link:#8a6d1f;
-    --maxw:44rem;
-  }
-  @media (prefers-color-scheme: dark){
-    :root{
-      --bg:#141110; --panel:#1f1a18; --text:#efe9df; --muted:#a89c8c;
-      --accent:#c9a84c; --accent-soft:#2a2214; --border:#332b24; --link:#d9bc6a;
-    }
-  }
+  :root{--paper:#FBF8F2;--ink:#1F1A17;--muted:#6B625A;--wine:#7A2E2E;--rule:#E3DCCF;--maxw:42rem;color-scheme:light;}
   *{box-sizing:border-box;}
   html{-webkit-text-size-adjust:100%;}
-  body{
-    margin:0; background:var(--bg); color:var(--text);
+  body{margin:0;background:var(--paper);color:var(--ink);
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    line-height:1.65; font-size:17px;
-    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
-  }
-  .wrap{max-width:var(--maxw); margin:0 auto; padding:2.2rem 1.25rem 4rem;}
-  header{
-    display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between;
-    gap:1rem; padding-bottom:1.4rem; margin-bottom:1.6rem; border-bottom:1px solid var(--border);
-  }
-  .brand{
-    font-weight:700; letter-spacing:.02em; font-size:1.05rem;
-    display:flex; align-items:center; gap:.55rem;
-  }
-  .brand .dot{
-    width:.85rem; height:.85rem; border-radius:.22rem;
-    background:linear-gradient(135deg, var(--accent), #8a6d1f);
-    box-shadow:0 0 0 4px var(--accent-soft);
-  }
-  .langs{display:flex; gap:.35rem;}
-  .langs button{
-    font:inherit; font-size:.86rem; font-weight:600; cursor:pointer;
-    padding:.34rem .7rem; border-radius:999px; color:var(--muted);
-    background:transparent; border:1px solid var(--border);
-    transition:background .15s,color .15s,border-color .15s;
-  }
-  .langs button:hover{color:var(--text);}
-  .langs button[aria-pressed="true"]{
-    background:var(--accent-soft); color:var(--accent); border-color:transparent;
-  }
-  h1{font-size:1.7rem; line-height:1.25; margin:.2rem 0 .3rem; letter-spacing:-.01em;}
-  .updated{color:var(--muted); font-size:.92rem; margin:0 0 2rem;}
-  h2{
-    font-size:1.16rem; margin:2.1rem 0 .5rem; padding-top:.2rem;
-    color:var(--accent); letter-spacing:-.005em;
-  }
-  p{margin:.55rem 0;}
-  ul{margin:.6rem 0 .6rem; padding-left:1.2rem;}
-  li{margin:.32rem 0;}
-  a{color:var(--link); text-decoration:none; border-bottom:1px solid transparent; transition:border-color .15s;}
-  a:hover{border-bottom-color:var(--link);}
-  strong{font-weight:650;}
-  .intro{
-    background:var(--panel); border:1px solid var(--border); border-radius:.9rem;
-    padding:.9rem 1.1rem; margin:.4rem 0 .6rem;
-  }
-  .intro p{margin:0;}
-  footer{
-    margin-top:3rem; padding-top:1.3rem; border-top:1px solid var(--border);
-    color:var(--muted); font-size:.86rem;
-  }
+    line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:2rem 16px 4rem;}
+  header{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.8rem;
+    padding-bottom:1rem;margin-bottom:1.6rem;border-bottom:1px solid var(--rule);}
+  .brand{font-family:"New York",ui-serif,Georgia,serif;font-size:1.25rem;}
+  .langs{display:flex;flex-wrap:wrap;gap:.3rem;}
+  .langs button{font:inherit;font-size:.82rem;font-weight:600;cursor:pointer;padding:.25rem .55rem;
+    border-radius:2px;color:var(--muted);background:transparent;border:1px solid var(--rule);}
+  .langs button[aria-pressed="true"]{color:var(--wine);border-color:var(--wine);}
+  .kicker{font-size:11px;letter-spacing:1.2px;text-transform:uppercase;color:var(--wine);font-weight:600;
+    padding-bottom:.35rem;border-bottom:1px solid var(--wine);display:inline-block;margin:0;}
+  h1{font-family:"New York",ui-serif,Georgia,serif;font-weight:400;font-size:1.9rem;line-height:1.2;margin:.6rem 0 .3rem;}
+  .updated{color:var(--muted);font-size:.9rem;margin:0 0 1.6rem;font-variant-numeric:tabular-nums;}
+  h2{font-family:"New York",ui-serif,Georgia,serif;font-weight:400;font-size:1.25rem;margin:2rem 0 .4rem;
+    padding-top:1rem;border-top:1px solid var(--rule);}
+  p{margin:.5rem 0;} ul{margin:.5rem 0;padding-left:1.2rem;} li{margin:.3rem 0;}
+  a{color:var(--wine);}
+  strong{font-weight:600;}
+  .intro{border-left:2px solid var(--wine);padding:.2rem 0 .2rem 1rem;margin:.4rem 0 .8rem;}
+  dt{font-weight:600;margin-top:1rem;} dd{margin:.2rem 0 0;}
+  footer{margin-top:3rem;padding-top:1rem;border-top:1px solid var(--rule);color:var(--muted);font-size:.85rem;}
   section[hidden]{display:none;}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <header>
-    <div class="brand"><span class="dot" aria-hidden="true"></span>Voûte</div>
-    <nav class="langs" aria-label="Langue / Language">
-      <button data-l="fr" aria-pressed="true" onclick="setLang('fr')">Français</button>
-      <button data-l="en" aria-pressed="false" onclick="setLang('en')">English</button>
-    </nav>
-  </header>
+<header><div class="brand">Voûte</div><nav class="langs" aria-label="Langue"><button type="button" data-l="fr" lang="fr" onclick="setLang('fr')">Français</button><button type="button" data-l="en" lang="en" onclick="setLang('en')">English</button><button type="button" data-l="de" lang="de" onclick="setLang('de')">Deutsch</button><button type="button" data-l="it" lang="it" onclick="setLang('it')">Italiano</button><button type="button" data-l="es" lang="es" onclick="setLang('es')">Español</button></nav></header>
+<section id="fr" lang="fr">
+<p class="kicker">Assistance</p><h1>Voûte — votre cave à vin, gratuite et privée.</h1>
+<div class="intro"><p>Voûte garde votre cave sur votre iPhone : vins, emplacements, fenêtres d'apogée, dégustations, statistiques. Sans compte, sans publicité, sans collecte de données.</p></div>
+<h2>Questions fréquentes</h2><dl><dt>Mes données sont-elles en sécurité ?</dt><dd>Tout vit sur votre iPhone. Vous pouvez exporter toute votre cave (JSON, CSV, PDF) depuis les Réglages de l'app, et activer si vous le voulez la synchronisation par votre iCloud privé.</dd><dt>L'app est-elle vraiment gratuite ?</dt><dd>Oui, entièrement et sans limite, sans abonnement. Vous pouvez laisser un pourboire si l'envie vous prend : il ne débloque rien.</dd><dt>Comment scanner une étiquette ?</dt><dd>Depuis l'onglet Cave, touchez « + » puis « Scanner l'étiquette » : la lecture se fait sur l'iPhone, l'image n'est envoyée nulle part.</dd><dt>Un vin, une fonction, un souci ?</dt><dd>Écrivez-nous : chaque message est lu.</dd></dl>
+<h2>Contact</h2><p><a href="mailto:hazael.bosson@icloud.com">hazael.bosson@icloud.com</a></p>
+<h2>Confidentialité</h2><p><a href="privacy.html#fr">Politique de confidentialité</a> — en résumé : aucune donnée collectée, aucun serveur.</p>
+</section>
+<section id="en" lang="en" hidden>
+<p class="kicker">Support</p><h1>Voûte — your wine cellar, free and private.</h1>
+<div class="intro"><p>Voûte keeps your cellar on your iPhone: wines, locations, drinking windows, tastings, statistics. No account, no ads, no data collection.</p></div>
+<h2>Frequently asked questions</h2><dl><dt>Is my data safe?</dt><dd>Everything lives on your iPhone. You can export your whole cellar (JSON, CSV, PDF) from the app's Settings, and turn on sync through your private iCloud if you wish.</dd><dt>Is the app really free?</dt><dd>Yes, entirely, with no limits and no subscription. You can leave a tip if you feel like it: it unlocks nothing.</dd><dt>How do I scan a label?</dt><dd>In the Cellar tab, tap “+” then “Scan the label”: the reading happens on your iPhone, and the image goes nowhere.</dd><dt>A wine, a feature, an issue?</dt><dd>Write to us: every message is read.</dd></dl>
+<h2>Contact</h2><p><a href="mailto:hazael.bosson@icloud.com">hazael.bosson@icloud.com</a></p>
+<h2>Privacy</h2><p><a href="privacy.html#en">Privacy Policy</a> — in short: no data collected, no server.</p>
+</section>
+<section id="de" lang="de" hidden>
+<p class="kicker">Hilfe</p><h1>Voûte — Ihr Weinkeller, kostenlos und privat.</h1>
+<div class="intro"><p>Voûte bewahrt Ihren Keller auf Ihrem iPhone auf: Weine, Lagerplätze, Trinkfenster, Verkostungen, Statistiken. Ohne Konto, ohne Werbung, ohne Datenerhebung.</p></div>
+<h2>Häufige Fragen</h2><dl><dt>Sind meine Daten sicher?</dt><dd>Alles bleibt auf Ihrem iPhone. Sie können Ihren ganzen Keller in den Einstellungen der App exportieren (JSON, CSV, PDF) und bei Bedarf die Synchronisierung über Ihre private iCloud einschalten.</dd><dt>Ist die App wirklich kostenlos?</dt><dd>Ja, vollständig, ohne Grenzen und ohne Abo. Wenn Sie möchten, können Sie ein Trinkgeld geben: Es schaltet nichts frei.</dd><dt>Wie scanne ich ein Etikett?</dt><dd>Tippen Sie im Tab „Keller“ auf „+“ und dann auf „Etikett scannen“: Gelesen wird auf dem iPhone, das Bild geht nirgendwohin.</dd><dt>Ein Wein, eine Funktion, ein Problem?</dt><dd>Schreiben Sie uns: Jede Nachricht wird gelesen.</dd></dl>
+<h2>Kontakt</h2><p><a href="mailto:hazael.bosson@icloud.com">hazael.bosson@icloud.com</a></p>
+<h2>Datenschutz</h2><p><a href="privacy.html#de">Datenschutzerklärung</a> — kurz gesagt: keine Daten erhoben, kein Server.</p>
+</section>
+<section id="it" lang="it" hidden>
+<p class="kicker">Assistenza</p><h1>Voûte — la tua cantina, gratuita e privata.</h1>
+<div class="intro"><p>Voûte custodisce la tua cantina sul tuo iPhone: vini, collocazioni, finestre di consumo, degustazioni, statistiche. Senza account, senza pubblicità, senza raccolta di dati.</p></div>
+<h2>Domande frequenti</h2><dl><dt>I miei dati sono al sicuro?</dt><dd>Tutto resta sul tuo iPhone. Puoi esportare tutta la cantina (JSON, CSV, PDF) dalle Impostazioni dell'app e, se vuoi, attivare la sincronizzazione con il tuo iCloud privato.</dd><dt>L'app è davvero gratuita?</dt><dd>Sì, del tutto, senza limiti e senza abbonamento. Se ti va, puoi lasciare una mancia: non sblocca nulla.</dd><dt>Come si scansiona un'etichetta?</dt><dd>Nella scheda Cantina, tocca «+» e poi «Scansiona l'etichetta»: la lettura avviene sull'iPhone e l'immagine non va da nessuna parte.</dd><dt>Un vino, una funzione, un problema?</dt><dd>Scrivici: ogni messaggio viene letto.</dd></dl>
+<h2>Contatto</h2><p><a href="mailto:hazael.bosson@icloud.com">hazael.bosson@icloud.com</a></p>
+<h2>Privacy</h2><p><a href="privacy.html#it">Informativa sulla privacy</a> — in breve: nessun dato raccolto, nessun server.</p>
+</section>
+<section id="es" lang="es" hidden>
+<p class="kicker">Ayuda</p><h1>Voûte — tu bodega, gratuita y privada.</h1>
+<div class="intro"><p>Voûte guarda tu bodega en tu iPhone: vinos, ubicaciones, ventanas de consumo, catas, estadísticas. Sin cuenta, sin publicidad, sin recogida de datos.</p></div>
+<h2>Preguntas frecuentes</h2><dl><dt>¿Están seguros mis datos?</dt><dd>Todo vive en tu iPhone. Puedes exportar toda tu bodega (JSON, CSV, PDF) desde los Ajustes de la app y, si quieres, activar la sincronización con tu iCloud privado.</dd><dt>¿La app es realmente gratuita?</dt><dd>Sí, por completo, sin límites y sin suscripción. Si te apetece, puedes dejar una propina: no desbloquea nada.</dd><dt>¿Cómo escaneo una etiqueta?</dt><dd>En la pestaña Bodega, toca «+» y luego «Escanear la etiqueta»: la lectura se hace en el iPhone y la imagen no va a ninguna parte.</dd><dt>¿Un vino, una función, un problema?</dt><dd>Escríbenos: leemos todos los mensajes.</dd></dl>
+<h2>Contacto</h2><p><a href="mailto:hazael.bosson@icloud.com">hazael.bosson@icloud.com</a></p>
+<h2>Privacidad</h2><p><a href="privacy.html#es">Política de privacidad</a> — en resumen: ningún dato recogido, ningún servidor.</p>
+</section>
 
-  <main>
-    <section id="fr" lang="fr">
-      <h1>Assistance</h1>
-      <p class="updated">Voûte — votre cave à vin, gratuite et privée.</p>
-
-      <div class="intro">
-        <p><strong>Voûte</strong> garde votre cave sur votre iPhone : vins, emplacements, fenêtres d'apogée, dégustations, statistiques — sans compte, sans publicité, sans collecte de données.</p>
-      </div>
-
-      <h2>Questions fréquentes</h2>
-      <p><strong>Mes données sont-elles en sécurité ?</strong> Tout vit sur votre appareil. Vous pouvez exporter l'intégralité de votre cave (JSON, CSV, PDF) depuis Réglages → Exports, et activer si vous le souhaitez la synchronisation via votre iCloud privé.</p>
-      <p><strong>L'app est-elle vraiment gratuite ?</strong> Oui, entièrement et sans limite — pas d'achat intégré, pas d'abonnement.</p>
-      <p><strong>Comment scanner une étiquette ?</strong> Depuis l'onglet Cave, touchez « + » puis « Scanner l'étiquette » : la lecture se fait sur l'appareil, l'image n'est jamais envoyée.</p>
-      <p><strong>Un vin, une fonction, un souci ?</strong> Écrivez-nous — chaque message est lu.</p>
-
-      <h2>Contact</h2>
-      <p><a href="mailto:hazael.bosson@icloud.com">hazael.bosson@icloud.com</a></p>
-
-      <h2>Confidentialité</h2>
-      <p><a href="privacy.html">Politique de confidentialité</a> — en résumé : aucune donnée collectée, aucun serveur.</p>
-    </section>
-
-    <section id="en" lang="en" hidden>
-      <h1>Support</h1>
-      <p class="updated">Voûte — your wine cellar, free and private.</p>
-
-      <div class="intro">
-        <p><strong>Voûte</strong> keeps your cellar on your iPhone: wines, locations, drinking windows, tastings, statistics — no account, no ads, no data collection.</p>
-      </div>
-
-      <h2>Frequently asked questions</h2>
-      <p><strong>Is my data safe?</strong> Everything lives on your device. You can export your whole cellar (JSON, CSV, PDF) from Settings → Exports, and optionally enable sync through your private iCloud.</p>
-      <p><strong>Is the app really free?</strong> Yes, entirely and without limits — no in-app purchase, no subscription.</p>
-      <p><strong>How do I scan a label?</strong> From the Cellar tab, tap “+” then “Scan the label”: recognition happens on device, the image is never uploaded.</p>
-      <p><strong>A wine, a feature, an issue?</strong> Write to us — every message is read.</p>
-
-      <h2>Contact</h2>
-      <p><a href="mailto:hazael.bosson@icloud.com">hazael.bosson@icloud.com</a></p>
-
-      <h2>Privacy</h2>
-      <p><a href="privacy.html">Privacy Policy</a> — in short: no data collected, no server.</p>
-    </section>
-  </main>
-
-  <footer>© 2026 Hazaël Bosson — Voûte</footer>
+<footer>© 2026 Hazaël Bosson — Voûte</footer>
 </div>
-
 <script>
-  var LANGS = ['fr','en'];
-  var TITLES = {
-    fr: 'Voûte — Assistance',
-    en: 'Voûte — Support'
-  };
+  var LANGS=['fr', 'en', 'de', 'it', 'es'];
+  var TITLES={fr:'Voûte — Assistance',en:'Voûte — Support',de:'Voûte — Hilfe',it:'Voûte — Assistenza',es:'Voûte — Ayuda'};
   function setLang(l){
-    if (LANGS.indexOf(l) === -1) l = 'fr';
-    for (var i=0;i<LANGS.length;i++){
-      var x = LANGS[i];
-      document.getElementById(x).hidden = (x !== l);
-      var btn = document.querySelector('button[data-l="'+x+'"]');
-      if (btn) btn.setAttribute('aria-pressed', x === l ? 'true' : 'false');
-    }
-    document.documentElement.lang = l;
-    if (TITLES[l]) document.title = TITLES[l];
+    if(LANGS.indexOf(l)===-1)l='fr';
+    LANGS.forEach(function(x){
+      document.getElementById(x).hidden=(x!==l);
+      var b=document.querySelector('button[data-l="'+x+'"]');
+      if(b)b.setAttribute('aria-pressed',x===l?'true':'false');
+    });
+    document.documentElement.lang=l; document.title=TITLES[l];
   }
   (function(){
-    var n = (navigator.language || 'fr').slice(0,2).toLowerCase();
-    setLang(LANGS.indexOf(n) !== -1 ? n : 'fr');
+    var n=(location.hash.slice(1)||navigator.language||'fr').slice(0,2).toLowerCase();
+    setLang(LANGS.indexOf(n)!==-1?n:'fr'); window.scrollTo(0,0);
   })();
 </script>
 </body>
